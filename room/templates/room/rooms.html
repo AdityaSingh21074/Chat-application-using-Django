@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Rooms | {% endblock %}
+
+{% block content %}
+<div class="container mx-auto my-8 p-10 lg:p-20 text-center">
+    <h1 class="text-4xl lg:text-6xl font-bold text-teal-600 mb-8">Explore Chat Rooms</h1>
+
+    <div class="flex flex-wrap justify-center mt-6">
+        {% for room in rooms %}
+            <div class="w-full lg:w-1/4 px-3 py-3">
+                <div class="p-4 bg-white shadow rounded-xl text-center" style="background-color: #ffffff6b;">
+                    <h2 class="mb-5 text-2xl font-semibold">{{ room.name }}</h2>
+
+                    <a href="{% url 'room' room.slug %}" class="px-5 py-3 block rounded-full text-white bg-gray-800 hover:bg-gray-700">Join</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'frontpage' %}" class="mt-8 px-6 py-3 text-white bg-blue-600 rounded-full inline-block hover:bg-blue-900">Back to Home</a>
+</div>
+
+{% endblock %}
