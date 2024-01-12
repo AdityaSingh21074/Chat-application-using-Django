@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-otl5!(uxbon%-b116jdgy)b#lquty0(e!)5+y_p0qrh8d$%x@*
 DEBUG = True
 
 ALLOWED_HOSTS = []
-LOGOUT_REDIRECT_URL = '/'
+SITE_ID=1
+LOGOUT_REDIRECT_URL = '/frontpage/'
 LOGIN_REDIRECT_URL = '/rooms/'
 LOGIN_URL = '/login/'
 
