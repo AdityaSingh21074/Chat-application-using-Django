@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Create Room | {% endblock %}
+
+{% block content %}
+<div class="container mx-auto my-8 p-10 lg:p-20 text-center">
+    <h1 class="text-4xl lg:text-6xl font-bold text-teal-600 mb-8">Create a New Room</h1>
+
+    <form method="post" action="{% url 'create_room' %}" class="max-w-md mx-auto">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="px-5 py-3 block rounded-full text-white bg-teal-600 hover:bg-teal-700 mt-6">Create Room</button>
+    </form>
+
+    <a href="{% url 'rooms' %}" class="mt-8 px-6 py-3 text-white bg-blue-600 rounded-full inline-block hover:bg-blue-900">Back to Rooms</a>
+</div>
+{% endblock %}

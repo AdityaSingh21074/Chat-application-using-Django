@@ -24,3 +24,7 @@ def signup(request):
 def logout_view(request):
     logout(request)
     return redirect('frontpage')
+
+def create_room(request):
+    
+    return render(request, 'core/create_room.html')

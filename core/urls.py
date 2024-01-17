@@ -8,4 +8,5 @@ urlpatterns = [
     path('signup/', views.signup, name='signup'),
     path('login/', auth_views.LoginView.as_view(template_name='core/login.html'), name='login'),
     path('logout/', views.logout_view, name='logout_view'),  
+    path('rooms/create_room/', views.create_room, name='create_room'),
 ]
